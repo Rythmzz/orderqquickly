@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragment_home_dest"
+    >
+
+    <fragment android:id="@+id/fragment_home_dest"
+        tools:layout="@layout/fragment_home_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentHomePage"/>
+
+    <fragment android:id="@+id/fragment_menu_dest"
+        tools:layout="@layout/fragment_menu_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentMenuPage"/>
+
+    <fragment android:id="@+id/fragment_profile_dest"
+        tools:layout="@layout/fragment_profile_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentProfilePage"/>
+
+</navigation>
