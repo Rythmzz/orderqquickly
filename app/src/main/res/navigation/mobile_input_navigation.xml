@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_input_navigation"
+    app:startDestination="@id/fragment_login_dest"
+    >
+    <fragment android:id="@+id/fragment_login_dest"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentLoginPage"
+        tools:layout="@layout/fragment_login_page">
+        <action
+            android:id="@+id/action_fragment_login_dest_to_fragment_register_dest"
+            app:destination="@id/fragment_register_dest" />
+    </fragment>
+
+
+    <fragment android:id="@+id/fragment_register_dest"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentRegisterPage"
+        tools:layout="@layout/fragment_register_page">
+        <action
+            android:id="@+id/action_fragment_login_dest_to_fragment_register_dest"
+            app:popUpTo="@id/fragment_login_dest" />
+
+    </fragment>
+</navigation>

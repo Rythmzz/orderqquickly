@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dos_indicator"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="100dp"
+        app:dotsColor="@color/main_color_01"
+        app:selectedDotColor="@color/main_color_03"
+        android:padding="15dp"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="2.5"
+        />
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_gravity="center|bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <RelativeLayout
+            android:id="@+id/next"
+            android:background="@drawable/shape_01"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_forward"
+
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

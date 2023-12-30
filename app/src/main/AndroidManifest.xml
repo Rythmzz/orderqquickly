@@ -9,17 +9,28 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.OrderQQuickly"
+        android:theme="@style/Theme.OrderQQuickly.NoBackground"
         tools:targetApi="31" >
+        <activity android:name=".view.activity.ActivityAboutPage" android:exported="true">
+
+
+        </activity>
         <activity android:name=".ActivityMainPage" android:exported="true">
             <nav-graph android:value="@navigation/mobile_navigation"/>
 
+
+        </activity>
+
+        <activity android:name=".view.activity.ActivityInputPage" android:exported="true">
+            <nav-graph android:value="@navigation/mobile_input_navigation"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
         </activity>
+
+
 
 
     </application>
