@@ -4,8 +4,11 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.navigation.NavigationView
 import com.oqq.orderqquickly.databinding.ActivityMainPageBinding
 
 class ActivityMainPage: AppCompatActivity() {
@@ -23,8 +26,16 @@ class ActivityMainPage: AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.my_nav_host_fragment) as NavHostFragment
                 ?: return
 
-        val navControll = navHost.navController
+        val navController = navHost.navController
 
-        binding.bnBottom.setupWithNavController(navControll)
+        setupNavigationMenu(navController)
+
+        binding.bnBottom.setupWithNavController(navController)
+    }
+
+
+    private fun setupNavigationMenu(navController:NavController){
+        val sideNavView = findViewById<NavigationView>(R.id.nav_view)
+        sideNavView?.setupWithNavController(navController)
     }
 }

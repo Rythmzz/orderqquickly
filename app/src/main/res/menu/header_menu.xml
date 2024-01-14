@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/recipe" android:title="Công thức nấu">
+        <menu>
+            <item android:id="@+id/my_recipe_dest"
+                android:icon="@drawable/ic_recipe_02"
+                android:title="Công thức của tôi"
+                />
+            <item android:id="@+id/my_favorite_recipe_dest"
+                android:icon="@drawable/ic_heart_01"
+                android:title="Công thức yêu thích"
+                />
+        </menu>
+
+    </item>
+
+    <item android:id="@+id/menu" android:title="Menu">
+        <menu>
+            <item android:id="@+id/my_favorite_menu_dest"
+                android:icon="@drawable/ic_heart_01"
+                android:title="Menu yêu thích"
+                />
+            <item android:id="@+id/scan_menu_dest"
+                android:icon="@drawable/ic_scan_qr"
+                android:title="Quét Menu"
+                />
+        </menu>
+
+    </item>
+
+<item android:id="@+id/other" android:title="Khác">
+<menu>
+
+    <item android:id="@+id/logout_dest"
+        android:icon="@drawable/ic_logout"
+        android:title="Đăng Xuất"
+        />
+</menu>
+
+</item>
+
+
+</menu>

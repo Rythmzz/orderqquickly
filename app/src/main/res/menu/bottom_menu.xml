@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/fragment_home_dest"
-        android:title="Home"
+        android:title="Explore"
         android:icon="@drawable/ic_home"
         />
     <item android:id="@+id/fragment_menu_dest"

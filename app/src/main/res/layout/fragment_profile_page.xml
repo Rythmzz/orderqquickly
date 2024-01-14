@@ -1,6 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+    <LinearLayout
+        android:id="@+id/layout_avatar"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.makeramen.roundedimageview.RoundedImageView
+            app:riv_border_color="@color/white"
+            app:riv_border_width="2dp"
+            app:riv_corner_radius="64dp"
+            android:src="@drawable/img_user"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="27dp"
+            android:text="Arthur Morgan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:drawableStart="@drawable/ic_phone"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:text="+84 0365304510"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:drawableStart="@drawable/ic_location"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:text="West, America"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_account"
+        app:layout_constraintVertical_bias="0.1"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/main_color_01"
+        android:text="Account Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/layout_account"
+        app:layout_constraintTop_toBottomOf="@id/text_account"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:drawablePadding="15dp"
+            android:text="Chỉnh sửa thông tin"
+            android:drawableStart="@drawable/ic_user"
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:tint="@color/black"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            app:dividerColor="@color/main_color_02"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+        <LinearLayout
+
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:drawablePadding="15dp"
+                android:text="Chế độ chủ nhà hàng"
+                android:drawableStart="@drawable/ic_chef"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <Switch
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_general"
+        app:layout_constraintVertical_bias="0.1"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/main_color_01"
+        android:text="General Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/layout_general"
+        app:layout_constraintTop_toBottomOf="@id/text_general"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:drawablePadding="15dp"
+                android:text="About us"
+                android:drawableStart="@drawable/ic_info"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:tint="@color/black"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

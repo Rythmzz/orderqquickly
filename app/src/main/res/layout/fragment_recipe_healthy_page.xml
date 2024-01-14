@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="15dp"
+        android:id="@+id/layout_header"
+        android:background="@drawable/img_16"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:background="@drawable/ripper_effect"
+                android:id="@+id/back"
+                android:src="@drawable/ic_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="32dp"
+                android:textStyle="bold"
+                android:textColor="@color/main_color_01"
+                android:text="Healthy Food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="30 công thức khác nhau được lưu trữ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+       <TextView
+           app:layout_constraintTop_toBottomOf="@id/layout_header"
+           android:id="@+id/text_header_article"
+           android:textStyle="bold"
+           app:layout_constraintStart_toStartOf="parent"
+           android:textColor="@color/black"
+           android:textSize="23dp"
+           android:padding="15dp"
+           android:text="Bài Viết Về Healthy Food"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <com.smarteist.autoimageslider.SliderView
+           app:layout_constraintTop_toBottomOf="@id/text_header_article"
+           android:id="@+id/image_slider"
+           android:layout_width="match_parent"
+           android:layout_height="210dp"
+           app:sliderAnimationDuration="1000"
+           app:sliderAutoCycleDirection="right"
+           app:sliderAutoCycleEnabled="true"
+           app:sliderIndicatorGravity="center_horizontal|bottom"
+           app:sliderIndicatorOrientation="horizontal"
+           app:sliderIndicatorPadding="3dp"
+           app:sliderIndicatorRadius="2dp"
+           app:sliderIndicatorSelectedColor="@color/main_color_03"
+           app:sliderIndicatorUnselectedColor="@color/main_color_02"
+           app:sliderStartAutoCycle="true"
+           tools:layout_editor_absoluteX="0dp" />
+       <TextView
+           app:layout_constraintTop_toBottomOf="@id/image_slider"
+           android:id="@+id/text_header_recipe"
+           android:textStyle="bold"
+           app:layout_constraintStart_toStartOf="parent"
+           android:textColor="@color/black"
+           android:textSize="23dp"
+           android:padding="15dp"
+           android:text="Công Thức Món"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <LinearLayout
+           app:layout_constraintTop_toBottomOf="@id/text_header_recipe"
+           android:id="@+id/list_new_recipe"
+           android:padding="15dp"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:id="@+id/layout_healthy_food_01"
+               android:background="@drawable/shape_08"
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <FrameLayout
+                   android:layout_margin="10dp"
+                   android:background="@drawable/shape_10"
+                   android:layout_width="70dp"
+                   android:layout_height="70dp">
+                   <com.makeramen.roundedimageview.RoundedImageView
+                       app:riv_corner_radius="22dp"
+                       android:scaleType="centerCrop"
+                       android:src="@drawable/img_food_01"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+               </FrameLayout>
+               <LinearLayout
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:textStyle="bold"
+                           android:textSize="22dp"
+                           android:textColor="@color/black"
+                           android:text="Pasta Salad"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <View
+                           android:layout_width="0dp"
+                           android:layout_height="0dp"
+                           android:layout_weight="1"/>
+                       <TextView
+                           android:drawablePadding="5dp"
+                           android:textSize="20dp"
+                           android:drawableEnd="@drawable/ic_view"
+                           android:textColor="@color/black"
+                           android:text="100"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+
+                   </LinearLayout>
+                   <LinearLayout
+                       android:orientation="horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       <com.google.android.material.chip.Chip
+                           android:textColor="@color/white"
+                           app:chipBackgroundColor="@color/main_color_03"
+                           android:text="🕒 25 Phút"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <View
+                           android:layout_width="5dp"
+                           android:layout_height="0dp"
+                           />
+                       <com.google.android.material.chip.Chip
+                           android:textColor="@color/white"
+                           app:chipBackgroundColor="@color/main_color_03"
+                           android:text="150 kcal"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <View
+                           android:layout_width="5dp"
+                           android:layout_height="0dp"
+                           />
+                       <com.google.android.material.chip.Chip
+                           android:textColor="@color/white"
+                           app:chipBackgroundColor="@color/main_color_03"
+                           android:text="📝 11-12"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layout_healthy_food_02"
+               android:background="@drawable/shape_08"
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <FrameLayout
+                   android:layout_margin="10dp"
+                   android:background="@drawable/shape_10"
+                   android:layout_width="70dp"
+                   android:layout_height="70dp">
+                   <com.makeramen.roundedimageview.RoundedImageView
+                       app:riv_corner_radius="22dp"
+                       android:scaleType="centerCrop"
+                       android:src="@drawable/img_food_01"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+               </FrameLayout>
+               <LinearLayout
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:textStyle="bold"
+                           android:textSize="22dp"
+                           android:textColor="@color/black"
+                           android:text="Pasta Salad"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <View
+                           android:layout_width="0dp"
+                           android:layout_height="0dp"
+                           android:layout_weight="1"/>
+                       <TextView
+                           android:drawablePadding="5dp"
+                           android:textSize="20dp"
+                           android:drawableEnd="@drawable/ic_view"
+                           android:textColor="@color/black"
+                           android:text="100"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+
+                   </LinearLayout>
+                   <LinearLayout
+                       android:orientation="horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       <com.google.android.material.chip.Chip
+                           android:textColor="@color/white"
+                           app:chipBackgroundColor="@color/main_color_03"
+                           android:text="🕒 25 Phút"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <View
+                           android:layout_width="5dp"
+                           android:layout_height="0dp"
+                           />
+                       <com.google.android.material.chip.Chip
+                           android:textColor="@color/white"
+                           app:chipBackgroundColor="@color/main_color_03"
+                           android:text="150 kcal"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <View
+                           android:layout_width="5dp"
+                           android:layout_height="0dp"
+                           />
+                       <com.google.android.material.chip.Chip
+                           android:textColor="@color/white"
+                           app:chipBackgroundColor="@color/main_color_03"
+                           android:text="📝 11-12"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -6,16 +6,102 @@
     app:startDestination="@id/fragment_home_dest"
     >
 
+    <fragment android:id="@+id/fragment_recipe_search_dest"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentRecipeSearchPage"
+        tools:layout="@layout/fragment_recipe_search_page">
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_recipe_search_dest"
+            app:popUpTo="@id/fragment_home_dest" />
+
+    </fragment>
+
     <fragment android:id="@+id/fragment_home_dest"
         tools:layout="@layout/fragment_home_page"
-        android:name="com.oqq.orderqquickly.view.fragment.FragmentHomePage"/>
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentHomePage">
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_detail_recipe_dest"
+            app:destination="@id/fragment_detail_recipe_dest" />
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_recipe_search_dest"
+            app:destination="@id/fragment_recipe_search_dest" />
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_add_recipe_detail_dest"
+            app:destination="@id/fragment_add_recipe_detail_dest" />
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_recipe_all_dest"
+            app:destination="@id/fragment_recipe_all_dest" />
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_recipe_healthy_page"
+            app:destination="@id/fragment_recipe_healthy_page" />
+    </fragment>
 
     <fragment android:id="@+id/fragment_menu_dest"
         tools:layout="@layout/fragment_menu_page"
-        android:name="com.oqq.orderqquickly.view.fragment.FragmentMenuPage"/>
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentMenuPage">
+        <action
+            android:id="@+id/action_fragment_menu_dest_to_fragment_menu_search_dest"
+            app:destination="@id/fragment_menu_search_dest" />
+    </fragment>
+
+    <fragment android:id="@+id/fragment_menu_search_dest"
+        tools:layout="@layout/fragment_menu_search_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentMenuSearchPage">
+        <action
+            android:id="@+id/action_fragment_menu_dest_to_fragment_menu_search_dest"
+            app:popUpTo="@id/fragment_menu_dest" />
+
+    </fragment>
 
     <fragment android:id="@+id/fragment_profile_dest"
         tools:layout="@layout/fragment_profile_page"
         android:name="com.oqq.orderqquickly.view.fragment.FragmentProfilePage"/>
+    <fragment android:id="@+id/fragment_add_recipe_detail_dest"
+        tools:layout="@layout/fragment_add_recipe_detail_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentAddRecipeDetailPage">
 
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_add_recipe_detail_dest"
+            app:popUpTo="@id/fragment_home_dest" />
+
+
+    </fragment>
+
+
+    <fragment android:id="@+id/fragment_detail_recipe_dest"
+        tools:layout="@layout/fragment_recipe_detail_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentRecipeDetailPage">
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_detail_recipe_dest"
+            app:popUpTo="@id/fragment_home_dest" />
+
+    </fragment>
+
+    <fragment android:id="@+id/fragment_recipe_all_dest"
+        tools:layout="@layout/fragment_recipe_all_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentRecipeAllPage">
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_recipe_all_dest"
+            app:popUpTo="@id/fragment_home_dest" />
+        <action
+            android:id="@+id/action_fragment_recipe_all_dest_to_fragment_recipe_all_detail_dest"
+            app:destination="@id/fragment_recipe_all_detail_dest" />
+
+    </fragment>
+
+    <fragment android:id="@+id/fragment_recipe_healthy_page"
+        tools:layout="@layout/fragment_recipe_healthy_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentRecipeHealthyPage">
+
+        <action
+            android:id="@+id/action_fragment_home_dest_to_fragment_recipe_healthy_page"
+           app:popUpTo="@id/fragment_home_dest" />
+    </fragment>
+
+    <fragment android:id="@+id/fragment_recipe_all_detail_dest"
+        tools:layout="@layout/fragment_recipe_all_detail_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentRecipeAllDetailPage">
+        <action
+            android:id="@+id/action_fragment_recipe_all_dest_to_fragment_recipe_all_detail_dest"
+            app:popUpTo="@id/fragment_recipe_all_dest"/>
+    </fragment>
 </navigation>
