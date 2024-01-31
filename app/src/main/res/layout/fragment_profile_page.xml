@@ -80,7 +80,7 @@
             android:textColor="@color/black"
             android:textSize="20dp"
             android:drawablePadding="15dp"
-            android:text="Chỉnh sửa thông tin"
+            android:text="Thông tin cá nhân"
             android:drawableStart="@drawable/ic_user"
             android:layout_gravity="center"
             android:layout_width="250dp"
@@ -90,6 +90,10 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
             <ImageView
+                android:background="@drawable/ripper_effect"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/iv_info_profile"
                 android:tint="@color/black"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_forward"
@@ -129,6 +133,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
             <Switch
+                android:id="@+id/switch_mode"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -174,8 +179,47 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:drawablePadding="15dp"
-                android:text="About us"
+                android:text="Thông tin về chúng tôi"
                 android:drawableStart="@drawable/ic_info"
+                android:layout_gravity="center"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:tint="@color/black"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            app:dividerColor="@color/main_color_02"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+        <LinearLayout
+
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:drawablePadding="15dp"
+                android:text="Chính sách"
+                android:drawableStart="@drawable/ic_policy"
                 android:layout_gravity="center"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"/>

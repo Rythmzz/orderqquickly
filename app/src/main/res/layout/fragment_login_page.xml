@@ -5,17 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.google.android.material.textfield.TextInputLayout
         app:layout_constraintBottom_toTopOf="@id/etPasswordLayout"
-        android:id="@+id/etEmailLayout"
+        android:id="@+id/etUserLayout"
         android:layout_width="300dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         >
-
         <com.google.android.material.textfield.TextInputEditText
-            android:hint="Email Address"
-            android:id="@+id/etEmail"
+            android:hint="Tài khoản"
+            android:id="@+id/etUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
@@ -26,12 +25,12 @@
         android:layout_height="wrap_content"
         app:passwordToggleEnabled="true"
         app:layout_constraintBottom_toTopOf="@id/layout_re_login"
-        app:layout_constraintTop_toBottomOf="@id/etEmailLayout"
+        app:layout_constraintTop_toBottomOf="@id/etUserLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:hint="Password"
+            android:hint="Mật khẩu"
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,13 +45,11 @@
         android:orientation="horizontal"
         android:layout_width="300dp"
         android:layout_height="wrap_content">
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
         <TextView
             android:layout_gravity="center"
             android:textColor="@color/white"
-            android:text="Remember Password"
+            android:text="Quên mật khẩu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -62,7 +59,7 @@
         android:id="@+id/btn_login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Login"
+        android:text="Đăng nhập"
         app:layout_constraintTop_toBottomOf="@id/layout_re_login"
         android:layout_width="300dp"
         android:layout_height="wrap_content"/>
@@ -81,7 +78,7 @@
         android:id="@+id/btn_login_google"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Login With Google"
+        android:text="Đăng nhập với Google"
         app:layout_constraintTop_toBottomOf="@id/text_login_with"
         android:layout_width="300dp"
         android:layout_height="wrap_content"/>

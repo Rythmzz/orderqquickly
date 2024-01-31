@@ -9,19 +9,25 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.oqq.orderqquickly.ActivityMainPage
 import com.oqq.orderqquickly.R
+import com.oqq.orderqquickly.data.local.AppPreferences
 import com.oqq.orderqquickly.databinding.ActivityAboutPageBinding
+import com.oqq.orderqquickly.listener.DialogResultListener
+import com.oqq.orderqquickly.view.dialog.CustomDialog
 import com.oqq.orderqquickly.view.fragment.FragmentAbout01
 import com.oqq.orderqquickly.view.fragment.FragmentAbout02
 import com.oqq.orderqquickly.view.fragment.FragmentAbout03
+import org.koin.android.ext.android.inject
 
-class ActivityAboutPage: AppCompatActivity() {
+class ActivityAboutPage: AppCompatActivity(), DialogResultListener {
     private lateinit var binding:ActivityAboutPageBinding
     private lateinit var fragments:ArrayList<Fragment>
+    private val mSecurePreferences:AppPreferences by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAboutPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        skipTheme()
         setTitleUI()
         setFragment()
         setAdapter()
@@ -29,16 +35,43 @@ class ActivityAboutPage: AppCompatActivity() {
 
     }
 
+    private fun skipTheme() {
+        val check:Boolean = mSecurePreferences.getFirstTheme()
+        if (!check){
+            nextHomePage()
+        }
+        }
+
+    override fun onBackPressed() {
+        if (binding.viewPager.currentItem == 0 ){
+            super.onBackPressed()
+        }
+        else {
+            binding.viewPager.setCurrentItem(binding.viewPager.currentItem - 1,true)
+        }
+    }
+
+    private fun nextHomePage(){
+        mSecurePreferences.setFirstTheme(false)
+        val intent: Intent = Intent(this,ActivityMainPage::class.java)
+        startActivity(intent)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        finish()
+    }
+
     private fun setBehavior() {
         binding.next.setOnClickListener {
             if (binding.viewPager.currentItem == fragments.size -1){
-                val intent: Intent = Intent(this,ActivityMainPage::class.java)
-                startActivity(intent)
-                finish()
+                nextHomePage()
             }
             else{
                 binding.viewPager.setCurrentItem(binding.viewPager.currentItem + 1,true)
             }
+        }
+
+        binding.skip.setOnClickListener {
+            val dialog = CustomDialog(this,this,"Bỏ Qua Phần Giới Thiệu","Bạn có chắc muốn bỏ qua phần giới thiệu?")
+            dialog.show()
         }
     }
 
@@ -66,5 +99,13 @@ class ActivityAboutPage: AppCompatActivity() {
     private fun setTitleUI() {
         supportActionBar?.hide()
         window.statusBarColor = ContextCompat.getColor(this, R.color.main_color_01)
+    }
+
+    override fun onDialogResult(result: Boolean) {
+        if (result){
+            nextHomePage()
+        }
+        else {
+        }
     }
 }

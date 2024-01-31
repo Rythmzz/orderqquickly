@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/back"
+            android:background="@drawable/ripper_effect"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:src="@drawable/ic_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:drawablePadding="5dp"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Chỉnh sửa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/layout_avatar"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.makeramen.roundedimageview.RoundedImageView
+            app:riv_border_color="@color/white"
+            app:riv_border_width="2dp"
+            app:riv_corner_radius="64dp"
+            android:src="@drawable/img_user"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+        <ImageView
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_edit_02"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_avatar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_user"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Tên đầy đủ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_03"
+                android:hint="Họ (tên đệm)"
+                android:paddingLeft="15dp" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.1" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_03"
+                android:hint="Tên"
+                android:paddingLeft="15dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_gender"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/main_color_01"
+                android:text="Giới tính"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <RadioButton
+                    android:checked="true"
+                    android:textColor="@color/white"
+                    android:text="Nam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:textColor="@color/white"
+                    android:text="Nữ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TextView
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_email"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_03"
+            android:hint="example@gmail.com"
+            android:paddingLeft="15dp" />
+        <TextView
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_phone_01"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Điện thoại"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_03"
+            android:hint="(+84) 036 530 4510"
+            android:paddingLeft="15dp" />
+        <TextView
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_locate"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Địa chỉ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:paddingTop="15dp"
+            android:gravity="top|start"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/shape_03"
+            android:hint="98 Man Thiện, Phường Hiệp Phú, TP Thủ Đức"
+            android:paddingLeft="15dp" />
+
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

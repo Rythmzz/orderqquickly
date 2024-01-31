@@ -29,9 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:id="@+id/skip"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:background="@drawable/ripper_effect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Skip"
+            android:text="Bỏ qua"
             android:textSize="15dp"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -42,6 +46,9 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
         <RelativeLayout
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             android:id="@+id/next"
             android:background="@drawable/shape_01"
             android:gravity="center"

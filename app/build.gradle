@@ -39,6 +39,10 @@ android {
 }
 
 dependencies {
+    //SecurePreferences
+    implementation 'com.scottyab:secure-preferences-lib:0.1.7'
+    //Android SpinKit
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
     //ImageSlide
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 
@@ -83,6 +87,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3-alpha01'
 
     implementation("androidx.navigation:navigation-dynamic-features-fragment:2.6.0")
+    implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.core:core-ktx:+'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     androidTestImplementation("androidx.navigation:navigation-testing:2.6.0")

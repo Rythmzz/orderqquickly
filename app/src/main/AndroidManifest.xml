@@ -6,6 +6,7 @@
     <application
         android:name=".di.MyApplication"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -13,16 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrderQQuickly.NoBackground"
         tools:targetApi="31" >
-        <activity android:name=".view.activity.ActivityAboutPage" android:exported="true">
 
+        <activity android:name=".view.activity.ActivityRestaurantOwnerPage" android:exported="true">
+            <nav-graph android:value="@navigation/mobile_restaurant_owner_navigation"/>
 
         </activity>
-        <activity android:name=".ActivityMainPage" android:exported="true">
-            <nav-graph android:value="@navigation/mobile_navigation"/>
+        <activity android:name=".view.activity.ActivityAboutPage" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
+        </activity>
+        <activity android:name=".ActivityMainPage" android:exported="true">
+            <nav-graph android:value="@navigation/mobile_navigation"/>
+
 
         </activity>
 

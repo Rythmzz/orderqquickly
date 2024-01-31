@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/layout_edit"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/back"
+                android:background="@drawable/ripper_effect"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:tint="@color/black"
+                android:src="@drawable/ic_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:background="@drawable/ripper_effect"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/main_color_01"
+                android:text="Chỉnh sửa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@id/layout_edit"
+            android:padding="15dp"
+            android:id="@+id/layout_header"
+            android:background="@drawable/img_02"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="32dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Restaurant Bolsa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/ic_location"
+                        android:textSize="15dp"
+                        android:textColor="@color/white"
+                        android:text="Valentine, New York"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:src="@drawable/img_01"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_review"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"/>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:tint="@color/main_color_02"
+                    android:src="@drawable/ic_rate"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:text="No rating"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:tint="@color/main_color_01"
+                    android:src="@drawable/ic_watch"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:text="40min"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:tint="@color/main_color_01"
+                    android:src="@drawable/ic_location"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:text="1.4km"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"/>
+
+        </LinearLayout>
+
+        <com.smarteist.autoimageslider.SliderView
+            app:layout_constraintTop_toBottomOf="@id/layout_review"
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            app:sliderAnimationDuration="1000"
+            app:sliderAutoCycleDirection="right"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="@color/main_color_03"
+            app:sliderIndicatorUnselectedColor="@color/main_color_02"
+            app:sliderStartAutoCycle="true"
+            tools:layout_editor_absoluteX="0dp" />
+
+
+        <HorizontalScrollView
+            app:layout_constraintTop_toBottomOf="@id/image_slider"
+            android:id="@+id/layout_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:padding="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/ripper_effect"
+                        android:id="@+id/text_popular"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/main_color_01"
+                        android:textSize="18dp"
+                        android:text="Phổ biến"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/divider_popular"
+                        app:dividerColor="@color/main_color_04"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/ripper_effect"
+                        android:id="@+id/text_special"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/main_color_02"
+                        android:textSize="18dp"
+                        android:text="Đặc biệt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/divider_special"
+                        android:visibility="gone"
+                        app:dividerColor="@color/main_color_04"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/ripper_effect"
+                        android:id="@+id/text_main_food"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/main_color_02"
+                        android:textSize="18dp"
+                        android:text="Món chính"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/divider_main_food"
+                        android:visibility="gone"
+                        app:dividerColor="@color/main_color_04"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/ripper_effect"
+                        android:id="@+id/text_sub_food"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/main_color_02"
+                        android:textSize="18dp"
+                        android:text="Món phụ"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/divider_sub_food"
+                        android:visibility="gone"
+                        app:dividerColor="@color/main_color_04"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:background="@drawable/ripper_effect"
+                        android:id="@+id/text_all"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/main_color_02"
+                        android:textSize="18dp"
+                        android:text="Tất cả"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/divider_all"
+                        android:visibility="gone"
+                        app:dividerColor="@color/main_color_04"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_category_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_category"
+            >
+            <LinearLayout
+                android:id="@+id/layout_category_popular"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/text_header_popular"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/black"
+                    android:textSize="23dp"
+                    android:padding="15dp"
+                    android:text="Phổ biến"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+
+                    android:id="@+id/layout_popular"
+                    android:padding="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/text_header_popular"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:riv_corner_radius="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_food_01"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="270dp"
+                            android:layout_height="100dp">
+                            <TextView
+                                android:textSize="22dp"
+                                android:textColor="@color/black"
+                                android:text="Chicken Fajita Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:text="8'' Pizza with regular sof drink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="120.000 VNĐ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:riv_corner_radius="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_food_01"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="270dp"
+                            android:layout_height="100dp">
+                            <TextView
+                                android:textSize="22dp"
+                                android:textColor="@color/black"
+                                android:text="Chicken Fajita Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:text="8'' Pizza with regular sof drink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="120.000 VNĐ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_constraintTop_toBottomOf="@id/layout_category_popular"
+                android:id="@+id/layout_category_special"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/text_header_special"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/black"
+                    android:textSize="23dp"
+                    android:padding="15dp"
+                    android:text="Đặc biệt dành cho bạn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:id="@+id/layout_special"
+                    android:padding="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/text_header_popular"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:riv_corner_radius="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_food_01"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="270dp"
+                            android:layout_height="100dp">
+                            <TextView
+                                android:textSize="22dp"
+                                android:textColor="@color/black"
+                                android:text="Chicken Fajita Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:text="8'' Pizza with regular sof drink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="120.000 VNĐ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:riv_corner_radius="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_food_01"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="270dp"
+                            android:layout_height="100dp">
+                            <TextView
+                                android:textSize="22dp"
+                                android:textColor="@color/black"
+                                android:text="Chicken Fajita Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:text="8'' Pizza with regular sof drink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="120.000 VNĐ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_constraintTop_toBottomOf="@id/layout_category_special"
+                android:id="@+id/layout_category_main_food"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/text_header_main_food"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/black"
+                    android:textSize="23dp"
+                    android:padding="15dp"
+                    android:text="Món chính"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:id="@+id/layout_main_food"
+                    android:padding="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/text_header_popular"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:riv_corner_radius="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_food_01"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="270dp"
+                            android:layout_height="100dp">
+                            <TextView
+                                android:textSize="22dp"
+                                android:textColor="@color/black"
+                                android:text="Chicken Fajita Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:text="8'' Pizza with regular sof drink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="120.000 VNĐ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:riv_corner_radius="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_food_01"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="270dp"
+                            android:layout_height="100dp">
+                            <TextView
+                                android:textSize="22dp"
+                                android:textColor="@color/black"
+                                android:text="Chicken Fajita Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:text="8'' Pizza with regular sof drink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="120.000 VNĐ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_constraintTop_toBottomOf="@id/layout_category_main_food"
+                android:id="@+id/layout_category_sub_food"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/text_header_sub_food"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="23dp"
+                    android:padding="15dp"
+                    android:text="Món phụ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:id="@+id/layout_sub_food"
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:riv_corner_radius="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_food_01"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="270dp"
+                            android:layout_height="100dp">
+                            <TextView
+                                android:textSize="22dp"
+                                android:textColor="@color/black"
+                                android:text="Chicken Fajita Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:text="8'' Pizza with regular sof drink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="120.000 VNĐ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:riv_corner_radius="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_food_01"
+                            />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="270dp"
+                            android:layout_height="100dp">
+                            <TextView
+                                android:textSize="22dp"
+                                android:textColor="@color/black"
+                                android:text="Chicken Fajita Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:text="8'' Pizza with regular sof drink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="120.000 VNĐ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"/>
+            </LinearLayout>
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

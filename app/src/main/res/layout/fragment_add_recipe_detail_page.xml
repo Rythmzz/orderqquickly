@@ -82,7 +82,7 @@
             android:hint="Tên món"
             android:paddingLeft="15dp"
             android:background="@drawable/shape_03"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"/>
         <View
             android:layout_width="0dp"
@@ -104,7 +104,7 @@
             android:drawablePadding="5dp"
             android:hint="Giới thiệu món ăn"
             android:background="@drawable/shape_03"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"/>
 
         <View
@@ -127,7 +127,7 @@
             android:drawablePadding="5dp"
             android:hint="Chi tiết món ăn"
             android:background="@drawable/shape_03"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"/>
         <View
             android:layout_width="0dp"
@@ -145,7 +145,7 @@
             android:layout_height="15dp"/>
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
                 android:inputType="number"
@@ -188,7 +188,7 @@
             android:hint="0"
             android:paddingLeft="15dp"
             android:background="@drawable/shape_03"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"/>
         <View
             android:layout_width="0dp"
@@ -210,7 +210,7 @@
             android:hint="0"
             android:paddingLeft="15dp"
             android:background="@drawable/shape_03"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"/>
 
         <View
@@ -274,7 +274,7 @@
             android:drawablePadding="5dp"
             android:hint="Chi tiết"
             android:background="@drawable/shape_03"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"/>
         <View
             android:layout_width="0dp"

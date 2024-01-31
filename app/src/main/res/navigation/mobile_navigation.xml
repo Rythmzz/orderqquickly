@@ -41,6 +41,9 @@
         <action
             android:id="@+id/action_fragment_menu_dest_to_fragment_menu_search_dest"
             app:destination="@id/fragment_menu_search_dest" />
+        <action
+            android:id="@+id/action_fragment_menu_dest_to_fragment_menu_restaurant_dest"
+            app:destination="@id/fragment_menu_restaurant_dest" />
     </fragment>
 
     <fragment android:id="@+id/fragment_menu_search_dest"
@@ -54,7 +57,11 @@
 
     <fragment android:id="@+id/fragment_profile_dest"
         tools:layout="@layout/fragment_profile_page"
-        android:name="com.oqq.orderqquickly.view.fragment.FragmentProfilePage"/>
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentProfilePage">
+        <action
+            android:id="@+id/action_fragment_profile_dest_to_fragment_profile_detail_dest"
+            app:destination="@id/fragment_profile_detail_dest" />
+    </fragment>
     <fragment android:id="@+id/fragment_add_recipe_detail_dest"
         tools:layout="@layout/fragment_add_recipe_detail_page"
         android:name="com.oqq.orderqquickly.view.fragment.FragmentAddRecipeDetailPage">
@@ -104,4 +111,58 @@
             android:id="@+id/action_fragment_recipe_all_dest_to_fragment_recipe_all_detail_dest"
             app:popUpTo="@id/fragment_recipe_all_dest"/>
     </fragment>
+
+    <fragment android:id="@+id/fragment_menu_restaurant_dest"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentMenuRestaurantPage"
+        tools:layout="@layout/fragment_menu_restaurant_page">
+        <action
+            android:id="@+id/action_fragment_menu_dest_to_fragment_menu_restaurant_dest"
+            app:popUpTo="@id/fragment_menu_dest" />
+        <action
+            android:id="@+id/action_fragment_menu_restaurant_dest_to_fragment_food_detail_dest"
+            app:destination="@id/fragment_food_detail_dest" />
+
+    </fragment>
+
+    <fragment android:id="@+id/fragment_profile_detail_dest"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentProfileDetailPage"
+        tools:layout="@layout/fragment_profile_detail_page">
+        <action
+            android:id="@+id/action_fragment_profile_dest_to_fragment_profile_detail_dest"
+            app:popUpTo="@id/fragment_profile_dest" />
+
+    </fragment>
+
+    <fragment android:id="@+id/fragment_my_recipe_dest"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentMyRecipePage"
+        tools:layout="@layout/fragment_my_recipe_page">
+        <action android:id="@+id/action_back_home"
+            app:popUpTo="@id/fragment_home_dest"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/fragment_my_favorite_recipe_dest"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentMyFavoriteRecipePage"
+        tools:layout="@layout/fragment_my_favorite_recipe_page">
+        <action android:id="@+id/action_back_home"
+            app:popUpTo="@id/fragment_home_dest"/>
+    </fragment>
+
+    <fragment android:id="@+id/fragment_my_favorite_menu_dest"
+        tools:layout="@layout/fragment_my_favorite_menu_page"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentMyFavoriteMenuPage">
+        <action android:id="@+id/action_back_home"
+            app:popUpTo="@id/fragment_home_dest"/>
+    </fragment>
+
+    <fragment android:id="@+id/fragment_food_detail_dest"
+        android:name="com.oqq.orderqquickly.view.fragment.FragmentFoodDetailPage"
+        tools:layout="@layout/fragment_food_detail_page"
+        >
+        <action
+            android:id="@+id/action_fragment_menu_restaurant_dest_to_fragment_food_detail_dest"
+            app:popUpTo="@id/fragment_menu_restaurant_dest" />
+
+    </fragment>
+
 </navigation>

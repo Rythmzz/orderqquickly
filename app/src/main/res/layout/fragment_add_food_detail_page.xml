@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/layout_avatar"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/img_food_main"
+            android:layout_width="300dp"
+            android:layout_height="200dp"/>
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:scaleType="centerCrop"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="2dp"
+                app:riv_corner_radius="80dp"
+                android:src="@drawable/img_07"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+            <ImageView
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/ic_edit_02"
+                android:layout_width="42dp"
+                android:layout_height="42dp"/>
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_avatar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Tên Món Ăn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <EditText
+            android:id="@+id/edit_name"
+            android:drawablePadding="5dp"
+            android:hint="Tên món"
+            android:paddingLeft="15dp"
+            android:background="@drawable/shape_03"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+
+        <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Mô Tả Món Ăn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <EditText
+            android:id="@+id/edit_description"
+            android:drawablePadding="5dp"
+            android:hint="Mô tả ngắn"
+            android:paddingLeft="15dp"
+            android:background="@drawable/shape_03"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+
+        <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Thể Loại"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <Spinner
+            android:backgroundTint="@color/white"
+            android:id="@+id/spinner_category"
+            android:drawablePadding="5dp"
+            android:paddingLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Giá Món Ăn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <EditText
+            android:id="@+id/edit_price"
+            android:drawablePadding="5dp"
+            android:hint="0 ₫"
+            android:paddingLeft="15dp"
+            android:background="@drawable/shape_03"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_color_01"
+            android:text="Giá Khuyến Mãi (Nếu Có)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <EditText
+            android:id="@+id/edit_sale_price"
+            android:drawablePadding="5dp"
+            android:hint="0 ₫"
+            android:paddingLeft="15dp"
+            android:background="@drawable/shape_03"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="15dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_no"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:text="Hủy bỏ"
+                android:textColor="#5DBCD2"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_yes"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:text="Xác nhận"
+                android:textColor="#5DBCD2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

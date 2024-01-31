@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/fragment_restaurant_dest"
+        android:title="Nhà hàng"
+        android:icon="@drawable/ic_restaurant_02"
+        />
+    <item android:id="@+id/fragment_order_dest"
+        android:title="Đơn Món"
+        android:icon="@drawable/ic_order"/>
+    <item android:id="@+id/fragment_profile_dest"
+        android:title="Cá Nhân"
+        android:icon="@drawable/ic_profile"/>
+</menu>

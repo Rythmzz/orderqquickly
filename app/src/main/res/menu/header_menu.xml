@@ -3,11 +3,11 @@
 
     <item android:id="@+id/recipe" android:title="Công thức nấu">
         <menu>
-            <item android:id="@+id/my_recipe_dest"
+            <item android:id="@+id/fragment_my_recipe_dest"
                 android:icon="@drawable/ic_recipe_02"
                 android:title="Công thức của tôi"
                 />
-            <item android:id="@+id/my_favorite_recipe_dest"
+            <item android:id="@+id/fragment_my_favorite_menu_dest"
                 android:icon="@drawable/ic_heart_01"
                 android:title="Công thức yêu thích"
                 />
@@ -17,7 +17,7 @@
 
     <item android:id="@+id/menu" android:title="Menu">
         <menu>
-            <item android:id="@+id/my_favorite_menu_dest"
+            <item android:id="@+id/fragment_my_favorite_recipe_dest"
                 android:icon="@drawable/ic_heart_01"
                 android:title="Menu yêu thích"
                 />
