@@ -1,2 +1,2 @@
 # orderqquickly
-Dự án thực hiện nhằm mục đích phục vụ cho phỏng vấn, với chủ đề về Ẩm Thực bao gồm các tính năng chính như thực hiện tra cứu menu và đặt món tại nhà hàng/quán ăn chỉ định, app được viết dành cho hệ thống Android, với ngôn ngữ sử dụng là Kotlin, tương lai dự án có thể phát triển thêm nhiều tính năng tích hợp khác
+Dự án thực hiện với chủ đề về công thức nấu ăn thực hiện tra cứu công thức, thêm mới công thức, app được viết dành cho hệ thống Android, với ngôn ngữ sử dụng là Kotlin, tương lai dự án có thể phát triển thêm nhiều tính năng tích hợp khác.
